@@ -1,0 +1,7 @@
+*~
+*.swp
+*.bak
+*.pyc
+*.o
+.DS_Store
+.token
