@@ -123,4 +123,4 @@ A baseline based on GPT 3.5, with a paragraph from the dev set listed as example
 
 ## Challenge metadata
 
-Tags: poleval-2023, reading-comprehension, question-answering
+Tags: poleval-2024, reading-comprehension, question-answering
