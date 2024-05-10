@@ -1,1 +1,1 @@
---metric CustomMetric%Final --metric CustomMetric%Levenshtein --metric CustomMetric%AnswerabilityF1
+--metric PolevalScore:N<Score>P<1>l --metric PolevalLevenshtein:N<Levenshtein>P<2>l  --metric PolevalAnswerability:N<Answerability>P<2> --precision 4 -%
