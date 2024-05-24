@@ -87,25 +87,18 @@ The train and dev sections of the dataset are to be found [here](https://hugging
 ## Evaluation
 The predictions will be evaluated using the attached evaluation script, which calculates normalized Levenshtien and F1 and averages them.
 
+
 ### Submission format
+The in.tsv file contains one question identifier per line, with each question identified by a unique ID in the following format:
 
-The submission should consist of a json file containing a list of answer objects. Each object should be paired with an identifier constructed of:
-1. the article id,
-2. the number of the paragraph,
-3. the number of the question.
+<article_id>\_<paragraph_number>\_<question_number>
 
-This utilises the original identifiers of the articles as well as the ordering of paragraphs and questions within the data structures. For instance, for the third question from the first paragraph of the article with the id 9773 the answer object should look like this:
+Note that paragraph and question numbers are 0-indexed.
 
-```
-  {
-    "id": "9773_0_2",
-    "question": "W jakich formach występowała Tora przekazana Mojżeszowi?",
-    "context": "Pisma rabiniczne – w tym Miszna – stanowią kompilację poglądów różnych rabinów na określony temat. Zgodnie z wierzeniami judaizmu Mojżesz otrzymał od Boga całą Torę, ale w dwóch częściach: jedną część w formie pisanej, a drugą część w formie ustnej. Miszna – jako Tora ustna – była traktowana nie tylko jako uzupełnienie Tory spisanej, ale również jako jej interpretacja i wyjaśnienie w konkretnych sytuacjach życiowych. Tym samym Miszna stanowiąca kodeks Prawa religijnego zaczęła równocześnie służyć za jego ustnie przekazywany podręcznik.",
-    "answer": "pisanej, ustnej"
-  }
-```
+Your submission should be written to the two out.tsv files (one in test-A, second in test-B), with each answer on a new line. The order of answers should match the order of questions in the in.tsv file. For example, the answer to the question on the 5th line of the in.tsv file should be on the 5th line of the out.tsv file.
 
-An example of how the system should interface with the input files, and the format of the output is given in the `solution_example` directory.
+A perfect solution should exactly match the contents of the expected.tsv file. To see examples of the input and expected output formats, refer to the in.tsv and expected.tsv files in the train and dev-0 folders.
+
 
 ## Baseline
 A baseline based on GPT 3.5, with a paragraph from the dev set listed as examples, achieves the following scores:
