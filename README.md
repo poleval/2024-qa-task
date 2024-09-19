@@ -31,6 +31,8 @@ All the subsets come from the same source (Polish Wikipedia), which was annotate
 ### Dataset format
 The training data largely follow the SQuAD format, they are available [here](https://huggingface.co/datasets/clarin-pl/poquad/tree/main). The test dataset will be made available separately and will follow the same format. The dataset is divided into articles, and for each article there is **at least one** and up to two annotated paragraphs. Each paragraph can contain up to five questions. For instance, the following is a paragraph with one question:
 
+**Update:** the test-A/test-B questions needed for the predictions were published on [github](https://github.com/poleval/2024-qa-task/tree/main) on 19th September.
+
 ```
 {
  "id": 9773,
